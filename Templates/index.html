@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Whatsapp |Whatsapp Automation Bot For Business</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?
+        family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <style>
+            *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+
+
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+    color: #555;
+}
+p{
+    color: #555;
+
+}
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.col-2 img{
+    max-width: 100%;
+    padding: 100px 0; 
+}
+.col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+.btn{
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+}
+.header{
+    background: radial-gradient(#fff,#ffd6d6);
+}
+.header .row{
+    margin-top: 70px 0;
+}
+.col-3{
+    flex: 30%;
+    min-width: 180px;
+    margin-bottom: 30px;
+}
+.col-3 img{
+    width: 100%;
+
+}
+.small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.offer{
+    background: radial-gradient(#fff,#ffd6d6);
+    margin-top: 50px;
+    padding: 20px 0;
+}
+.col-2 .offer-img{
+    padding: 50px;
+}
+small{
+    color: #555;
+}
+
+/*-----testimonial------*/
+.testimonial{
+    padding: 50px;
+}
+.testimonial .col-3{
+    text-align: center;
+    padding: 10px 10px;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+.testimonial .col-3 img{
+    width: 100px;
+    margin-top: 20px;
+    border-radius: 50px;
+}
+.testimonial .col-3:hover{
+    transform: translateY(-10px);
+}
+.fa.fa-quote-left{
+    font-size: 34px;
+    color: #ff523b;
+}
+.rating .fa{
+    color: #ff523b;
+}
+.col-3 p{
+    font-size: 12px;
+    margin: 12px 0;
+    color: #777;
+}
+.testimonial .col-3 h2{
+    font-weight: 600;
+    color: #555;
+    font-size: 16px;
+}
+/*------------------footer-----------------*/
+
+.footer{
+    background: #000;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 60px 0 20px;
+}
+.footer p{
+    color: #8a8a8a;
+}
+.footer h3{
+    color: #fff;
+}
+.footer-col-4{
+    flex-basis: 12%;
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+        </style>
+    </head>
+    <body>
+
+        <div class="header">
+
+        
+        <div class="container">
+            <div class="navbar">
+                <div class="logo"></div>
+                <img src="https://dme2wmiz2suov.cloudfront.net/Institution(2228)/Logo/1560548-Pentagon_Space_Logo.png" width="180px">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Account</a></li>
+                </ul>
+            </nav>
+           
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <h1>Welcome And Get Start With <br>Our Pentagon ChatBot!</h1>
+                <p>Introducing Our Pentagon Chatbot for WhatsApp! <br>For instance, list of Courses, Number of students got placed in Pentagon,
+                    Trainings data , Admissions Information , Professional Development Workshops and  Student Welfare</p>
+                <a href="/signup" class="btn" >Start &#8594;</a>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+    
+    <!-- The modal -->
+<div id="infoModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeInfoModal()">&times;</span>
+      <h2>Pentagon Whatsapp Chatbot </h2>
+      <p>The Pentagon chat bot incorporates a range of features and functionalities aimed at streamlining communication channels, improving accessibility to academic resources, and facilitating seamless interaction between users and college services. Leveraging technologies such as Twilio, Flask, MongoDB, and NLP, the chat bot offers a user-friendly interface through which users can access important information, receive assistance, and engage with college services in a convenient and efficient manner.One of the key objectives of the Pentagon chat bot is to reduce the burden on faculty and staff by automating responses to frequently asked questions and common queries. By harnessing the power of natural language processing, the chat bot is capable of understanding and interpreting user queries, providing accurate responses, and adapting to user preferences over time through continuous learning and refinement.</p>
+    </div>
+  </div>
+  
+  <script>
+    // JavaScript functions to show and hide the modal
+    function showInfoModal() {
+      document.getElementById("infoModal").style.display = "block";
+    }
+  
+    function closeInfoModal() {
+      document.getElementById("infoModal").style.display = "none";
+    }
+  </script>
+  
+       
+   <!----------- featured categories ----------->
+   <div class="categories">
+   <div class="small-container">
+
+   
+    <div class="row">
+        <div class="col-3">
+            <center><img src="https://pentagonspace.in/assets/images/logo/Pentagon%20space%20Golden%20Logo.png" style="height: 180px; width: 280px; object-fit: cover; background-color: #fff;"></center>
+        </div>
+    </div>
+   </div>
+</div>
+
+
+<!----------- featured categories ----------->
+<div class="categories">
+    <div class="small-container">
+
+         
+     </div>
+    </div>
+ </div>
+<!-------- offer -------->
+<!-- <div class="offer">
+<div class="small-container">
+    <div class="row">
+        <div class="col-2">
+            <img src="https://uploads-ssl.webflow.com/62b301157b5b9d4b40532e6d/644e904e7f5b78693f99e1b6_g257.png" class="offer-img">
+        </div>
+        <div class="col-2">
+            <p>New advancements in Whatsapp ChatBots</p>
+            <h1>E-commerce Integration</h1>
+            <p>WhatsApp chatbots offers booking appointments , admissions information which including cutoff and tution fees.</p>
+            <p>After succesfull login , enter this passcode join 
+                wolf-price</p>
+            <a href="index_2.html" class="btn">Register Now &#8594;</a>
+         <video width="100%" height="auto" controls>
+                <source src="#demovideo" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> 
+        </div>
+    </div>
+</div>
+</div> -->
+<!---------- testimonial ----------->
+<div class="testimonial">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-3">
+                <i class="fa fa-quote-left"></i>
+                <p>Whatsapp automation bot has proven to be a game-changer for our business.It has not only streamlined our customer interaction but has also allowed us to focus on more strategic aspects of our operations.</p>
+                <div class="rating">
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                </div>
+            </div>
+            <div class="col-3">
+                <i class="fa fa-quote-left"></i>
+                <p>The bot sometimes struggles with nuanced queries, and a more robust natural language processing system could improve its performance. Additionally, more customization options would allow businesses to tailor the bot to their specific needs. </p>
+                <div class="rating">
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star-o"></i>
+                </div>
+            </div>
+            <div class="col-3">
+                <i class="fa fa-quote-left"></i>
+                <p>The bot is incredibly responsive, understands queries accurately, and provides instant solutions.</p>
+                <div class="rating">
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star-o"></i>
+                     <i class="fa fa-star-o"></i>
+                </div>
+            </div>
+          
+        </div>
+    </div>
+</div>
+
+<!---------footer-------->
+
+<div class="footer">
+    <div class="container">
+
+    <div class="row">
+        <div class="footer-col-4"></div>
+    <h3>Follow us</h3>
+    <ul>
+        <li>Instagram</li>
+        <li>Twitter</li>
+        <li>YouTube</li>
+        <li>Facebook</li>
+    </ul>
+  </div>
+   </div>
+
+  </div>
+  </div>
+</body>
+</html>
+
+<script>
+    // JavaScript functions to show and hide the modal
+    function showInfoModal() {
+        document.getElementById("infoModal").style.display = "block";
+    }
+
+    function closeInfoModal() {
+        document.getElementById("infoModal").style.display = "none";
+    }
+</script>

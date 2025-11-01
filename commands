@@ -1,0 +1,6 @@
+py Whatsappbot.py
+new terminal 
+    type cmd
+    ngrok http 5000
+visit this site https://console.twilio.com/us1/develop/sms/try-it-out/whatsapp-learn?frameUrl=%2Fconsole%2Fsms%2Fwhatsapp%2Flearn%3Fx-target-region%3Dus1
+add the forwarding link to twilio and also add /webhook
